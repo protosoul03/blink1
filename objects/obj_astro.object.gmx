@@ -31,6 +31,7 @@ hsp = 0;
 vsp = 0;
 cooldown = 3;
 canTP = true;
+inTP = false;
 </string>
           </argument>
         </arguments>
@@ -79,23 +80,12 @@ canTP = true;
             <string>//Get player's input
 press = mouse_check_button_pressed(mb_left);
 release = mouse_check_button_released(mb_left);
-
 //React to inputs
 if (vsp &lt; 1) vsp += grav;
 if (place_meeting(x,y+1,obj_platform))
 {
     vsp = 0;
     canTP = true;
-}
-if canTP == true
-{
-    if release = true
-    {
-    obj_astro.x = mouse_x;
-    obj_astro.y = mouse_y;
-    canTP = false;
-    alarm[0] = cooldown * room_speed;
-    }
 }
 //Vertical Collision
 if(place_meeting(x,y+vsp,obj_platform))
@@ -107,6 +97,65 @@ if(place_meeting(x,y+vsp,obj_platform))
     vsp = 0;
 }
 y += vsp;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if obj_range.count = 1{
+    obj_astro.x = obj_range.x;
+    obj_astro.y = obj_range.y;
+    alarm[0] = cooldown * room_speed;
+    inTP = true;
+    canTP = false;
+    obj_range.count -=1;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if obj_range.count = 1
+{
+    rangeindicator = instance_create(x,y,obj_range);
+    rangeindicator.speed = 3;
+    rangeindicator.direction = point_direction(x,y,mouse_x, mouse_y)
+    
+} 
 </string>
           </argument>
         </arguments>

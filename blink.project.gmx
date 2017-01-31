@@ -9,6 +9,7 @@
     <sprite>sprites\spr_astro</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_random</sprite>
+    <sprite>sprites\spr_range</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_stars</background>
@@ -18,6 +19,7 @@
     <object>objects\obj_astro</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_spawn</object>
+    <object>objects\obj_range</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initial</room>
