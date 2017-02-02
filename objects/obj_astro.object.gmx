@@ -32,6 +32,7 @@ vsp = 0;
 cooldown = 3;
 canTP = true;
 inTP = false;
+
 </string>
           </argument>
         </arguments>
@@ -55,6 +56,7 @@ inTP = false;
           <argument>
             <kind>1</kind>
             <string>canTP = true;
+inTP = false;
 </string>
           </argument>
         </arguments>
@@ -86,6 +88,7 @@ if (place_meeting(x,y+1,obj_platform))
 {
     vsp = 0;
     canTP = true;
+    inTP = false;
 }
 //Vertical Collision
 if(place_meeting(x,y+vsp,obj_platform))
@@ -93,6 +96,9 @@ if(place_meeting(x,y+vsp,obj_platform))
     while(!place_meeting(x,y+sign(vsp),obj_platform))
     {
         y += sign(vsp);
+        canTP = true;
+    inTP = false;
+      
     }
     vsp = 0;
 }
@@ -119,12 +125,14 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    obj_astro.x = obj_range.x;
+            <string>  
+    obj_astro.x = obj_range.x;
     obj_astro.y = obj_range.y;
     alarm[0] = cooldown * room_speed;
     inTP = true;
     canTP = false;
     obj_range.count -=1;
+    
 </string>
           </argument>
         </arguments>

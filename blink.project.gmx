@@ -15,6 +15,7 @@
     <background>background\bg_stars</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_astro</object>
     <object>objects\obj_platform</object>
