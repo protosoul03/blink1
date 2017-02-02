@@ -119,14 +119,12 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_range.count = 1{
-    obj_astro.x = obj_range.x;
+            <string>    obj_astro.x = obj_range.x;
     obj_astro.y = obj_range.y;
     alarm[0] = cooldown * room_speed;
     inTP = true;
     canTP = false;
     obj_range.count -=1;
-    }
 </string>
           </argument>
         </arguments>
@@ -149,13 +147,9 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_range.count = 1
-{
-    rangeindicator = instance_create(x,y,obj_range);
+            <string>    rangeindicator = instance_create(x,y,obj_range);
     rangeindicator.speed = 3;
     rangeindicator.direction = point_direction(x,y,mouse_x, mouse_y)
-    
-} 
 </string>
           </argument>
         </arguments>
