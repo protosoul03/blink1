@@ -4,31 +4,144 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_death</sound>
+    <sound>sound\snd_tp</sound>
+    <sound>sound\snd_bg</sound>
+    <sound>sound\snd_shield</sound>
+    <sound>sound\snd_powerup</sound>
+    <sound>sound\snd_gun</sound>
+    <sound>sound\snd_load</sound>
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_asteroid</sound>
+    <sound>sound\snd_removeshield</sound>
+    <sound>sound\snd_spawn</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_astro</sprite>
+    <sprite>sprites\spr_astro_cd</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_random</sprite>
     <sprite>sprites\spr_range</sprite>
+    <sprite>sprites\spr_asteroid_s</sprite>
+    <sprite>sprites\spr_asteroid_m</sprite>
+    <sprite>sprites\spr_asteroid_l</sprite>
+    <sprite>sprites\spr_meteor</sprite>
+    <sprite>sprites\spr_start</sprite>
+    <sprite>sprites\spr_quit</sprite>
+    <sprite>sprites\spr_back</sprite>
+    <sprite>sprites\spr_quit2</sprite>
+    <sprite>sprites\spr_options</sprite>
+    <sprite>sprites\spr_restart</sprite>
+    <sprite>sprites\spr_death</sprite>
+    <sprite>sprites\spr_blnk</sprite>
+    <sprite>sprites\spr_i</sprite>
+    <sprite>sprites\spr_ufo</sprite>
+    <sprite>sprites\spr_coin</sprite>
+    <sprite>sprites\spr_powerup</sprite>
+    <sprite>sprites\spr_shield</sprite>
+    <sprite>sprites\spr_astro_pu</sprite>
+    <sprite>sprites\spr_musicon</sprite>
+    <sprite>sprites\spr_musicoff</sprite>
+    <sprite>sprites\spr_effectsoff</sprite>
+    <sprite>sprites\spr_effectson</sprite>
+    <sprite>sprites\spr_howto</sprite>
+    <sprite>sprites\spr_press</sprite>
+    <sprite>sprites\spr_gun</sprite>
+    <sprite>sprites\spr_laser</sprite>
+    <sprite>sprites\spr_load</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_stars</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\teleport.gml</script>
+    <script>scripts\spawn.gml</script>
+    <script>scripts\save_score.gml</script>
+    <script>scripts\load_score.gml</script>
+    <script>scripts\spawnTarget.gml</script>
+    <script>scripts\spawnUFO.gml</script>
+    <script>scripts\spawnAsteroid.gml</script>
+    <script>scripts\spawnRandom.gml</script>
+    <script>scripts\spawnIndicator.gml</script>
+    <script>scripts\spawnWall.gml</script>
+    <script>scripts\spawnDiagonal.gml</script>
+    <script>scripts\spawnPowerup.gml</script>
+    <script>scripts\spawnTwo.gml</script>
+    <script>scripts\spawnShield.gml</script>
+    <script>scripts\collisionCheck.gml</script>
+    <script>scripts\saveSettings.gml</script>
+    <script>scripts\loadSettings.gml</script>
+    <script>scripts\spawnAmmo.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_gameover</font>
+    <font>fonts\fnt_restart</font>
+    <font>fonts\fnt_score</font>
+    <font>fonts\fnt_start</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_astro</object>
-    <object>objects\obj_platform</object>
     <object>objects\obj_spawn</object>
-    <object>objects\obj_range</object>
+    <object>objects\obj_global</object>
+    <object>objects\obj_pause</object>
+    <object>objects\obj_score</object>
+    <objects name="Obstacles">
+      <object>objects\obj_asteroid_parent</object>
+      <object>objects\obj_asteroid_s</object>
+      <object>objects\obj_asteroid_m</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_asteroid_l</object>
+      <object>objects\obj_ufo</object>
+      <object>objects\obj_meteor</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_astro</object>
+      <object>objects\obj_range</object>
+      <object>objects\obj_death</object>
+      <object>objects\obj_laser</object>
+      <object>objects\obj_loader</object>
+    </objects>
+    <objects name="Options">
+      <object>objects\obj_start</object>
+      <object>objects\obj_options</object>
+      <object>objects\obj_quit</object>
+      <object>objects\obj_blnk</object>
+      <object>objects\obj_i</object>
+      <object>objects\obj_music</object>
+      <object>objects\obj_effects</object>
+      <object>objects\obj_back</object>
+      <object>objects\obj_press</object>
+    </objects>
+    <objects name="Game Over">
+      <object>objects\obj_gameover</object>
+      <object>objects\obj_restart</object>
+      <object>objects\obj_quit2</object>
+    </objects>
+    <object>objects\obj_soundControl</object>
+    <objects name="Collectibles">
+      <object>objects\obj_item_parent</object>
+      <object>objects\obj_shield</object>
+      <object>objects\obj_powerup</object>
+      <object>objects\obj_coin</object>
+      <object>objects\obj_gun</object>
+    </objects>
+    <object>objects\obj_howto</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\initial</room>
-    <room>rooms\rm_main</room>
+    <room>rooms\rm_initial</room>
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_options</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="ag_music"/>
+    <audiogroup name="ag_effects"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

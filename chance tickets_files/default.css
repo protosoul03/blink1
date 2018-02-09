@@ -1,0 +1,217 @@
+/*
+    client: ForestHills
+    theme: default
+    client customization and overrides
+
+    @primary-brand-color:   #002F4D
+    @secondary-brand-color: #002F4D
+    @tertiary-brand-color:  #74B2C4
+    footer top: 
+    footer mid: 
+    footer bottom: 
+    black: #000
+    white: #fff
+*/
+
+
+/* General/Global Styles */
+a {
+    color: #002F4D !important;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #74B2C4 !important;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: #74B2C4 !important;
+        text-decoration: none;
+    }
+
+
+/* Forms/Buttons/CTA Styles */
+.btn-default {
+    background-color: #002F4D;
+    border-color: #002F4D;
+    color: #fff;
+}
+
+    .btn-default:hover, .btn-default:focus, .btn-default.focus,
+    .open > .dropdown-toggle.btn-default {
+        background-color: #74B2C4;
+        border-color: #74B2C4;
+        color: #fff;
+    }
+
+    .btn-default:active, .btn-default.active {
+        background-color: #74B2C4;
+        border-color: #74B2C4;
+        color: #fff;
+    }
+
+    .btn-default.btn-secondary {
+        background-color: #fff;
+        border: 2px solid #002F4D;
+        color: #002F4D !important;
+    }
+        .btn-default.btn-secondary:hover, .btn-default.btn-secondary:active {
+            color: #74B2C4 !important;
+            border-color: #74B2C4;
+        }
+
+    .btn-default-link {
+        color: #002F4D;
+        text-decoration: none;
+    }
+
+        .btn-default-link:hover {
+            color: #74B2C4;
+            text-decoration: none;
+        }
+
+        .btn-default-link:active {
+            color: #74B2C4;
+            text-decoration: none;
+        }
+
+/* Header Styles */
+.header__brand--background {
+
+    background-color: #fffae9;
+
+}
+
+    
+
+    .header__brand--link {
+
+    }
+
+    .header__brand--logo {
+    
+        height: 50px;
+    
+
+    
+    }
+
+    
+
+    .header__brand--greeting {
+        color: #fff;
+    }
+
+
+/* Content Area Background Styles */
+.content {
+    /* full size background panel css here */
+    background-color: #ffffff;
+    
+}
+    .content__brand--background {
+        /* full size, max 2260px, background panel css here */
+        background-color: #ffffff;
+        
+    }
+        .content__brand--background .content__brand--background-left {
+            /* 500px left background panel and css here */
+            
+        }
+        .content__brand--background .content__container {
+            /* main, 1260px content container panel css here */
+            background-color: #fff;
+        }
+        .content__brand--background .content__brand--background-right {
+            /* 500px right background panel and css here */
+            
+        }
+
+
+/* Content Styles */
+.header-underline {
+    border-color: #002F4D;
+}
+    .header-underline .sub-header-text {
+        color: #000;
+    }
+
+.offer-name-heading, .sub-header-text {
+    color: #000;
+}
+
+.event__info-date {
+    background-color: #002F4D;
+}
+    .event__info-date-month, .event__info-date-day, .event__info-date-weekday, .event__info-date-noformat {
+        color: #ffffff;
+    }
+
+    .event__info-desc .offer-name-heading {
+        color: #002F4D;
+    }
+
+    .event__info.event_small > div:nth-child(-n+2):not(.event__info-desc) {
+        border: 1px solid #002F4D;
+    }
+
+.qtygrp__product-viewmap a .seating-map,
+.cart__box-item-map .seating-map,
+.prgrp__seats .icon-edit,
+.cart__payment-wrapper .cvv-verification-helper,
+.svg-icon-lock path,
+.checkbox__svg--container svg path
+{
+    color: #002F4D !important;
+    fill: #002F4D !important;
+    fill: currentColor !important;
+}
+    .checkbox__container input[type="checkbox"]:checked + .checkbox__label .checkbox__svg--container .checkbox__svg--outer {
+        stroke: #0A4285 !important;
+    }
+
+    .checkbox__svg--container svg rect {
+        stroke: #6d6d6d; /* always should be gray */
+    }
+
+.captcha-logo {
+
+}
+    .captcha-logo img {
+
+    }
+
+.timer-wrapper a, .timer-wrapper a:active {
+    color: #0A4285 !important;
+}
+    .timer-wrapper .timer-help-icon {
+        color: #0A4285 !important;
+    }
+        .timer-wrapper .tooltip.bottom .tooltip-arrow {
+            border-bottom-color: #0A4285 !important;
+        }
+
+        .timer-wrapper .tooltip-inner {
+            background-color: #0A4285 !important;
+        }
+
+/* Footer Styles */
+
+    .footer__row-top {
+        background-color: #002F4D;
+    }
+
+    .footer__row-mid {
+        background-color: #0A4285;
+    }
+
+
+.footer__row-bottom {
+    background-color: #002F4D;
+    color: #ffffff;
+}
+
+    .footer__row-bottom a.text {
+        color: #ffffff !important;
+    }

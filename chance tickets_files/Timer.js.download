@@ -1,0 +1,58 @@
+﻿var timerNumbers;
+var expired=false;
+var secondsToGo;
+function InitTimer(secsToGo,cookieName,timeDispID){
+	secondsToGo=secsToGo;
+	timerNumbers=document.getElementById(timeDispID);
+	var expTime=new Date();
+	var curTime=new Date();
+	var cookieDate=readCookie(cookieName);
+	if(cookieDate!=null){
+		expTime.setTime(Date.parse(cookieDate));
+		var timeRemaining=0;
+		try{
+			timeRemaining=Math.ceil((expTime.getTime()-curTime.getTime())/1000);
+			secondsToGo=timeRemaining;
+		}
+		catch(e){}
+	}else{
+		expTime.setTime(expTime.getTime()+(secondsToGo*1000));
+		createCookie(cookieName,expTime.toUTCString());
+	}
+	Tick();
+}
+function createCookie(name,value){
+	document.cookie=name+"="+escape(value)+"; path=/";
+}
+function readCookie(name){
+	var nameEQ=name+"=";
+	var ca=document.cookie.split(';');
+	for(var i=0;i<ca.length;i++){
+		var c=ca[i];
+		while(c.charAt(0)==' ')c=c.substring(1,c.length);
+		if(c.indexOf(nameEQ)==0)return unescape(c.substring(nameEQ.length,c.length));
+	}
+	return null;
+}
+function eraseCookie(name){
+	createCookie(name,"");
+}
+function Tick(){
+	if(expired)
+		return;
+	secondsToGo--;
+	if(secondsToGo<0){
+		expired=true;
+		timerNumbers.innerHTML='00:00';
+		return;
+	}
+	var t=secondsToGo;
+	var sec=t%60;
+	t=Math.floor((t-sec)/60);
+	var min=t%60;
+	t=Math.floor((t-min)/60);
+	var hour=t;
+	if(timerNumbers!=null)
+		timerNumbers.innerHTML=(min<=9?'0':'')+min+':'+(sec<=9?'0':'')+sec;
+	window.setTimeout("Tick()",1000);
+}
