@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawn_rate = 90;
+            <string>global.counter = 1;
+spawn_rate = 91 - global.counter;
 //spawn_increase = .2;
 
 
 background_htiled[0] = true;
 alarm[0] = spawn_rate;
-global.counter = 1;
 loadSettings();
 </string>
           </argument>
