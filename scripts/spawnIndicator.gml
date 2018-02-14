@@ -1,4 +1,4 @@
-// spawn where the indicator is
+// spawn asteroid where the indicator is
 if instance_exists(obj_range) = false
 exit
 

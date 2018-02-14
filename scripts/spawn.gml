@@ -1,3 +1,8 @@
+// spawn rate kept in the spawn object
+// depending on how much time has passed (global.counter)
+// more complex obstacles will spawn
+// lul spawns items separately from the asteroids
+
 alarm[0] = spawn_rate;
 var num;
 num = irandom_range(1,100);

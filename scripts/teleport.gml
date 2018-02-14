@@ -1,3 +1,7 @@
+// identifies all objects spawned in the game
+// moves all these items the x distance from the astronaut to the range indicator
+// this simulates teleporting
+
 num = instance_number(obj_asteroid_parent);
 num1 = instance_number(obj_item_parent);
 distance = 0;
