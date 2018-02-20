@@ -36,7 +36,7 @@ if global.total > 90 {
     if num > 90 && num <= 100{
         spawnAsteroid();
     }
-} else if global.total > 45 {
+} else if global.total > 30 {
     if num <= 30 && (indicator_exists = false){
         spawnTarget();
         }
