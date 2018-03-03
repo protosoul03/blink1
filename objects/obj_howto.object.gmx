@@ -58,7 +58,11 @@ else if check = true {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>player = instance_nearest(x,y,obj_astro);
+if player = -4
+exit
+
+draw_self();
 </string>
           </argument>
         </arguments>

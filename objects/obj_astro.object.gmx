@@ -366,8 +366,8 @@ if (inTP = true &amp;&amp; canTP = true){
 {
     if (canTP = true &amp;&amp; inTP = false)|| (plat = true &amp;&amp; inTP = false)
     {    
-        rangeindicator = instance_create(x+16,y,obj_range);
-        rangeindicator.speed = 6;
+        rangeindicator = instance_create(x,y,obj_range);
+        rangeindicator.speed = 5;
         rangeindicator.direction = point_direction(x,y,mouse_x,mouse_y);
         inTP = true;
     }
@@ -377,7 +377,7 @@ else if loaded = 0 &amp;&amp; mouse_x &lt; x &amp;&amp; (mouse_y &lt; room_heigh
     if (canTP = true &amp;&amp; inTP = false)|| (plat = true &amp;&amp; inTP = false)
     {    
         rangeindicator = instance_create(x+16,y,obj_range);
-        rangeindicator.speed = 6;
+        rangeindicator.speed = 5;
         rangeindicator.direction = point_direction(x,y,x, mouse_y);
         inTP = true;
     }

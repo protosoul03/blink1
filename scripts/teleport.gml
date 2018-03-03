@@ -1,13 +1,14 @@
 // identifies all objects spawned in the game
 // moves all these items the x distance from the astronaut to the range indicator
 // this simulates teleporting
-collisionCheck(); 
 
 num = instance_number(obj_asteroid_parent);
 num1 = instance_number(obj_item_parent);
 distance = 0;
 distance1 = 0;
 indicator = instance_nearest(x,y,obj_range);
+
+
 //if num < 0 
 //exit
 
@@ -35,6 +36,10 @@ background_x[0] += (0.5*distance);
 canTP = false;
 inTP = false;
 audio_play_sound(snd_tp,1,false);
+
+with indicator {
+    collisionCheck()
+    }
 
 with (indicator){
     instance_destroy();
