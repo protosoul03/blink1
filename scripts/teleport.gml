@@ -1,6 +1,7 @@
 // identifies all objects spawned in the game
 // moves all these items the x distance from the astronaut to the range indicator
 // this simulates teleporting
+collisionCheck(); 
 
 num = instance_number(obj_asteroid_parent);
 num1 = instance_number(obj_item_parent);
@@ -20,23 +21,24 @@ for (j = 0; j < num1; j++){
     selected = instance_find(obj_item_parent,j);
     selected.x += (distance1);
     }
-if (indicator.y < 0.5*sprite_height){
-    obj_astro.y = 0.5 * sprite_height;
-    } else if (indicator.y > 384 - (0.5*sprite_height)) {
-    obj_astro.y = room_height - (0.5*sprite_height);
+if (indicator.y < 0.5*global.astro_height){
+    obj_astro.y = 0.5 * global.astro_height;
+    } else if (indicator.y > room_height - (0.5*global.astro_height)) {
+    obj_astro.y = room_height - (0.5*global.astro_height);
     } else {
     obj_astro.y = indicator.y;
     }
 alarm[0] = cooldown * room_speed;
 oncd = 1;
+background_x[0] += (0.5*distance);
 //sprite_index = spr_astro_cd;
 canTP = false;
 inTP = false;
 audio_play_sound(snd_tp,1,false);
-    
+
 with (indicator){
     instance_destroy();
     }
-collisionCheck();
+
 
 //global.score -= distance;

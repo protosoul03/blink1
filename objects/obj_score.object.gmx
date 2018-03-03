@@ -91,7 +91,7 @@ global.score += .2;
             <string>draw_set_color(c_white);
 draw_set_font(fnt_score);
 draw_set_halign(fa_left);
-draw_text(230,30,"Current Score: " + string(global.seconds) + " sec" + "   High Score: " + string(global.highscore)+ " sec");
+draw_text(room_width/5,room_height*0.1,"Current Score: " + string(global.seconds) + " sec" + "   High Score: " + string(global.highscore)+ " sec");
 /*
 if (global.seconds &lt; 10) &amp;&amp; (global.minutes &lt; 10)
 {

@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.asteroid[1] = obj_asteroid_s;
-global.asteroid[2] = obj_asteroid_m;
-global.asteroid[3] = obj_asteroid_l;
+            <string>global.asteroid[3] = obj_asteroid_l;
 global.asteroidMax = 3;
 
 global.coins = 0;
@@ -40,6 +38,13 @@ audio_group_load(ag_effects);
 
 global.music = 1;
 global.effects = 1;
+
+global.astro_height = 32;
+global.asteroid_height = 72;
+global.meteor_height = 108;
+global.ufo_height = 32;
+global.loader_height = 24;
+global.tutorial_height = 24;
 </string>
           </argument>
         </arguments>

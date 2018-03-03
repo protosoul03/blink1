@@ -35,7 +35,7 @@ inTP = false;
 plat = false;
 shield = 1;
 powerup = 0;
-oncd = 0;
+oncd = 1;
 ammo = 1;
 loaded = 0;
 </string>
@@ -60,7 +60,8 @@ loaded = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cooldown = 0.9;
+            <string>//powerup
+cooldown = 0.9;
 powerup = 0;
 
 </string>
@@ -85,7 +86,8 @@ powerup = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>canTP = true;
+            <string>//teleport cooldown
+canTP = true;
 oncd = 0;
 //sprite_index = spr_astro;
 </string>
@@ -288,9 +290,9 @@ with other {
         }
     } else if shield = 0 {
     instance_destroy();
-    instance_create(x,y,obj_gameover);
-    instance_create(360,280,obj_restart);
-    instance_create(500,280,obj_quit2);
+    gameover = instance_create(x,y,obj_gameover);
+    instance_create(104,160,obj_restart);
+    instance_create(264,160,obj_quit2);
     audio_play_sound(snd_death,1,false);
     global.spawning = 0;
 
@@ -370,7 +372,7 @@ if (inTP = true &amp;&amp; canTP = true){
         inTP = true;
     }
 } 
-else if loaded = 0 &amp;&amp; mouse_x &lt; x &amp;&amp; (mouse_y &lt; 320 &amp;&amp; mouse_y &gt; 45)
+else if loaded = 0 &amp;&amp; mouse_x &lt; x &amp;&amp; (mouse_y &lt; room_height - (global.loader_height) &amp;&amp; mouse_y &gt; global.loader_height)
 {
     if (canTP = true &amp;&amp; inTP = false)|| (plat = true &amp;&amp; inTP = false)
     {    
@@ -423,8 +425,8 @@ if powerup = 0 &amp;&amp; oncd = 0{
     draw_sprite(spr_astro_cd,-1,x,y);
     }
 
-if shield = 1 {
-    draw_circle_colour(x+20,y,45,c_red,c_white,true);
+if shield &gt;= 1 {
+    draw_circle_colour(x,y,24,c_red,c_white,true);
     }
 </string>
           </argument>

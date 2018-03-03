@@ -92,9 +92,8 @@ with press {
     instance_destroy();
     }
     
-instance_create(80,96,obj_start);
-instance_create(96,192,obj_options);
-instance_create(80,288,obj_quit);
+instance_create(32,0.25*room_height,obj_start);
+instance_create(32,0.5*room_height,obj_options);
 
 mouse_clear(mb_any);
 </string>

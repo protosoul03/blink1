@@ -20,11 +20,8 @@
   <sprites name="sprites">
     <sprite>sprites\spr_astro</sprite>
     <sprite>sprites\spr_astro_cd</sprite>
-    <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_random</sprite>
     <sprite>sprites\spr_range</sprite>
-    <sprite>sprites\spr_asteroid_s</sprite>
-    <sprite>sprites\spr_asteroid_m</sprite>
     <sprite>sprites\spr_asteroid_l</sprite>
     <sprite>sprites\spr_meteor</sprite>
     <sprite>sprites\spr_start</sprite>
@@ -88,9 +85,6 @@
     <object>objects\obj_score</object>
     <objects name="Obstacles">
       <object>objects\obj_asteroid_parent</object>
-      <object>objects\obj_asteroid_s</object>
-      <object>objects\obj_asteroid_m</object>
-      <object>objects\obj_platform</object>
       <object>objects\obj_asteroid_l</object>
       <object>objects\obj_ufo</object>
       <object>objects\obj_meteor</object>
@@ -128,6 +122,9 @@
     </objects>
     <object>objects\obj_howto</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_initial</room>
     <room>rooms\rm_start</room>

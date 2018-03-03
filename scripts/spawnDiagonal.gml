@@ -4,7 +4,7 @@ num = choose(1,2)
 if num = 1{
     for( k = 0; k <3 ; k++)
     {
-        lgod = instance_create((room_width * 1.5)+64+(64*k), 64 + (128* k),obj_asteroid_l);
+        lgod = instance_create((room_width * 1.5)+32+(32*k), 32 + (64* k),obj_asteroid_l);
         lgod.speed = global.counter*4;
         lgod.direction = 180;
     }
@@ -13,7 +13,7 @@ if num = 1{
 if num = 2 {
     for( k = 0; k <3 ; k++)
     {
-        lgod = instance_create((room_width * 1.5)+64+(64*-k), 64 + (128* k),obj_asteroid_l);
+        lgod = instance_create((room_width * 1.5)+32+(32*-k), 32 + (64* k),obj_asteroid_l);
         lgod.speed = global.counter*4;
         lgod.direction = 180;
     }
