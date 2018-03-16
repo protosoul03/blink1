@@ -1,3 +1,5 @@
+//old code - teleport everything else - to be updated
+
 // identifies all objects spawned in the game
 // moves all these items the x distance from the astronaut to the range indicator
 // this simulates teleporting
